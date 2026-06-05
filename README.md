@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Junk Removal Service USA
 
-## Getting Started
+Lead-gen website for junk removal in Miami & South Florida. Built with Next.js 16 (App Router), Tailwind CSS 4, and deployed on Vercel.
 
-First, run the development server:
+## Tech Stack
+
+- **Framework**: Next.js 16.2.4 (App Router, React 19)
+- **Styling**: Tailwind CSS 4
+- **Email**: Resend
+- **CRM**: GoHighLevel (v1 agency key or v2 sub-account)
+- **Address autocomplete**: Google Maps Places API
+- **Deployment**: Vercel
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file (never commit it):
 
-## Learn More
+```env
+# Resend — email notifications on every lead submission
+RESEND_API_KEY=re_...
+RESEND_FROM=noreply@junkremovalserviceusa.com
+RESEND_TO=leads@yourdomain.com
 
-To learn more about Next.js, take a look at the following resources:
+# GoHighLevel — creates a contact on every lead submission
+# Use v2 (sub-account): set both variables
+# Use v1 (agency key only): set only GHL_API_KEY, leave GHL_LOCATION_ID blank
+GHL_API_KEY=...
+GHL_LOCATION_ID=...
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Google Maps — city autocomplete in the booking wizard
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=...
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Set the same variables in the **Vercel dashboard** under Project → Settings → Environment Variables.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Pre-Launch Checklist
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Required (blocks functionality)
+
+- [ ] **Set Vercel env vars** — `RESEND_API_KEY`, `RESEND_FROM`, `RESEND_TO`, `GHL_API_KEY`, `GHL_LOCATION_ID`, `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`
+- [ ] **Merge PR #3** — all changes are on branch `claude/wizardly-dirac-hpS80`, CI is green and mergeable
+- [ ] **Verify phone number** — confirm `(855) 885-5865` is active and routing to the right team
+- [ ] **Set up legal inboxes** — `privacy@junkremovalserviceusa.com` and `legal@junkremovalserviceusa.com` are referenced in the Privacy Policy and Terms; make sure they're monitored
+
+### Nice to Have (post-launch)
+
+- [ ] **Analytics** — add Google Analytics or another analytics provider; wire a conversion event on booking form submission
+- [ ] **Real testimonials** — replace placeholder reviews in `TestimonialsSection` with actual customer quotes
+- [ ] **Live chat** — optional widget (Intercom, Crisp, etc.) for visitors who don't want to call
+- [ ] **Google Reviews integration** — pull live star ratings from Google Business Profile instead of static copy
+- [ ] **Security headers** — add `X-Frame-Options`, `Content-Security-Policy`, etc. in `next.config.ts`
+
+---
+
+## Project Structure
+
+```
+src/
+  app/
+    api/leads/route.ts   # POST handler — Resend email + GHL contact creation
+    about/               # About page
+    contact/             # Contact page with booking wizard
+    pricing/             # Pricing page
+    privacy/             # Privacy Policy (TCPA-compliant)
+    terms/               # Terms of Service
+    services/[slug]/     # Dynamic service pages
+    [slug]/              # Dynamic city landing pages
+  components/
+    BookingWizard.tsx    # 3-step lead capture form
+    PlacesAutocomplete.tsx  # Google Maps city autocomplete
+    Header.tsx
+    Footer.tsx
+  data/
+    cities.ts            # City list with slugs and metadata
+    services.ts          # Service list with slugs and metadata
+  lib/
+    constants.ts         # SITE_NAME, SITE_URL, PHONE, etc.
+```

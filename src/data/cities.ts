@@ -50,7 +50,7 @@ export const cities: City[] = [
       "33181", "33182", "33183", "33184", "33185", "33186", "33187",
       "33188", "33189", "33190", "33193", "33194", "33196",
     ],
-    phone: "(305) 555-0100",
+    phone: "(855) 885-5865",
   },
   {
     slug: "fort-lauderdale",
@@ -78,7 +78,7 @@ export const cities: City[] = [
       "33311", "33312", "33313", "33314", "33315", "33316", "33317",
       "33319", "33324", "33325", "33326", "33328",
     ],
-    phone: "(954) 555-0200",
+    phone: "(855) 885-5865",
   },
   {
     slug: "hollywood",
@@ -97,7 +97,7 @@ export const cities: City[] = [
       { name: "Dania Beach", slug: "dania-beach" },
     ],
     zipCodes: ["33019", "33020", "33021", "33022", "33023", "33024", "33025"],
-    phone: "(954) 555-0300",
+    phone: "(855) 885-5865",
   },
   {
     slug: "pembroke-pines",
@@ -115,7 +115,7 @@ export const cities: City[] = [
       { name: "Miramar", slug: "miramar" },
     ],
     zipCodes: ["33023", "33024", "33025", "33026", "33027", "33028", "33029"],
-    phone: "(954) 555-0400",
+    phone: "(855) 885-5865",
   },
   {
     slug: "miramar",
@@ -132,7 +132,7 @@ export const cities: City[] = [
       { name: "Golden Isles", slug: "golden-isles" },
     ],
     zipCodes: ["33023", "33025", "33027", "33029"],
-    phone: "(954) 555-0500",
+    phone: "(855) 885-5865",
   },
   {
     slug: "pompano-beach",
@@ -149,7 +149,7 @@ export const cities: City[] = [
       { name: "Palm Aire", slug: "palm-aire" },
     ],
     zipCodes: ["33060", "33061", "33062", "33063", "33064", "33065", "33066", "33067", "33068", "33069"],
-    phone: "(954) 555-0600",
+    phone: "(855) 885-5865",
   },
 ]
 

@@ -4,7 +4,9 @@
   --font-geist: var(--font-geist-sans, system-ui, sans-serif);
 }
 
+html,
 body {
+  overflow-x: hidden;
   font-family: var(--font-geist);
 }
 

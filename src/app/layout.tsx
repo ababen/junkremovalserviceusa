@@ -39,8 +39,8 @@ const localBusinessSchema = {
   url: SITE_URL,
   telephone: PHONE,
   description: SITE_DESCRIPTION,
-  image: `${SITE_URL}/og-image.png`,
-  logo: `${SITE_URL}/logo.png`,
+  image: `${SITE_URL}/opengraph-image`,
+  logo: `${SITE_URL}/opengraph-image`,
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
@@ -71,13 +71,6 @@ const localBusinessSchema = {
       closes: "20:00",
     },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "500",
-    bestRating: "5",
-    worstRating: "1",
-  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
