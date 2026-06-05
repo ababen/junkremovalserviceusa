@@ -1,9 +1,11 @@
 "use client"
 
 import { useState, useTransition } from "react"
+import dynamic from "next/dynamic"
 import { services } from "@/data/services"
 import { PHONE } from "@/lib/constants"
-import PlacesAutocomplete from "@/components/PlacesAutocomplete"
+
+const PlacesAutocomplete = dynamic(() => import("@/components/PlacesAutocomplete"), { ssr: false })
 
 type Step = 1 | 2 | 3
 
