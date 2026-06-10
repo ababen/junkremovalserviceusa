@@ -9,6 +9,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: `${SITE_NAME} — Fast, Affordable, Eco-Friendly`,
     template: `%s | ${SITE_NAME}`,

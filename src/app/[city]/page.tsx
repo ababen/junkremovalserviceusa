@@ -2,7 +2,7 @@ import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import { cities, getCityBySlug } from "@/data/cities"
 import CityPageTemplate from "@/templates/CityPageTemplate"
-import { SITE_URL, SITE_NAME, PHONE } from "@/lib/constants"
+import { SITE_URL, SITE_NAME } from "@/lib/constants"
 
 export async function generateStaticParams() {
   return cities.map((city) => ({ city: city.slug }))
