@@ -919,6 +919,111 @@ export const cities: City[] = [
     zipCodes: ["33441", "33442", "33064", "33073"],
     phone: "(954) 555-4400",
   },
+  {
+    slug: "tamarac",
+    name: "Tamarac",
+    state: "Florida",
+    stateCode: "FL",
+    county: "Broward County",
+    headline: "Junk Removal in Tamarac, FL",
+    description:
+      "Reliable junk removal in Tamarac and Broward County. Estate cleanouts, furniture removal, and household junk hauled away.",
+    neighborhoods: [
+      { name: "Mainlands", slug: "tamarac-mainlands" },
+      { name: "Woodlands", slug: "woodlands" },
+      { name: "Kings Point", slug: "kings-point" },
+      { name: "Sunflower", slug: "sunflower" },
+    ],
+    zipCodes: ["33319", "33321", "33351"],
+    phone: "(954) 555-4500",
+  },
+  {
+    slug: "coconut-creek",
+    name: "Coconut Creek",
+    state: "Florida",
+    stateCode: "FL",
+    county: "Broward County",
+    headline: "Junk Removal in Coconut Creek, FL",
+    description:
+      "Same-day junk removal in Coconut Creek and Broward County. Condo cleanouts, garage hauls, and furniture removal.",
+    neighborhoods: [
+      { name: "Wynmoor", slug: "wynmoor" },
+      { name: "Township", slug: "township" },
+      { name: "Winston Park", slug: "winston-park" },
+      { name: "Cocobay", slug: "cocobay" },
+    ],
+    zipCodes: ["33063", "33066", "33073"],
+    phone: "(954) 555-4600",
+  },
+  {
+    slug: "margate",
+    name: "Margate",
+    state: "Florida",
+    stateCode: "FL",
+    county: "Broward County",
+    headline: "Junk Removal in Margate, FL",
+    description:
+      "Dependable junk hauling in Margate and Broward County. Residential and commercial cleanouts done same day.",
+    neighborhoods: [
+      { name: "Holiday Springs", slug: "holiday-springs" },
+      { name: "Oriole Gardens", slug: "oriole-gardens" },
+      { name: "Paradise Gardens", slug: "paradise-gardens" },
+    ],
+    zipCodes: ["33063", "33068", "33093"],
+    phone: "(954) 555-4700",
+  },
+  {
+    slug: "jupiter",
+    name: "Jupiter",
+    state: "Florida",
+    stateCode: "FL",
+    county: "Palm Beach County",
+    headline: "Junk Removal in Jupiter, FL",
+    description:
+      "Licensed, insured junk removal in Jupiter and northern Palm Beach County. Estate cleanouts and white-glove hauling.",
+    neighborhoods: [
+      { name: "Abacoa", slug: "abacoa" },
+      { name: "Jupiter Farms", slug: "jupiter-farms" },
+      { name: "Tequesta", slug: "tequesta" },
+      { name: "Jupiter Inlet Colony", slug: "jupiter-inlet-colony" },
+    ],
+    zipCodes: ["33458", "33469", "33477", "33478"],
+    phone: "(561) 555-4800",
+  },
+  {
+    slug: "riviera-beach",
+    name: "Riviera Beach",
+    state: "Florida",
+    stateCode: "FL",
+    county: "Palm Beach County",
+    headline: "Junk Removal in Riviera Beach, FL",
+    description:
+      "Fast junk removal in Riviera Beach and Palm Beach County. Condo and vacation-rental cleanouts, furniture, and debris.",
+    neighborhoods: [
+      { name: "Singer Island", slug: "singer-island" },
+      { name: "Port District", slug: "port-district" },
+      { name: "Monroe Heights", slug: "monroe-heights" },
+    ],
+    zipCodes: ["33403", "33404", "33407", "33410"],
+    phone: "(561) 555-4900",
+  },
+  {
+    slug: "cutler-bay",
+    name: "Cutler Bay",
+    state: "Florida",
+    stateCode: "FL",
+    county: "Miami-Dade County",
+    headline: "Junk Removal in Cutler Bay, FL",
+    description:
+      "Same-day junk removal in Cutler Bay and south Miami-Dade County. Garage cleanouts, furniture, and storm debris hauling.",
+    neighborhoods: [
+      { name: "Cutler Ridge", slug: "cutler-ridge" },
+      { name: "Lakes by the Bay", slug: "lakes-by-the-bay" },
+      { name: "Saga Bay", slug: "saga-bay" },
+    ],
+    zipCodes: ["33157", "33189", "33190"],
+    phone: "(305) 555-5000",
+  },
 ]
 
 export function getCityBySlug(slug: string): City | undefined {

@@ -33,7 +33,7 @@ rental churn, new-construction debris, and hurricane/storm cleanup.
 ### Covered today (6)
 Miami, Fort Lauderdale, Hollywood, Pembroke Pines, Miramar, Pompano Beach
 — all Miami-Dade / Broward (the "Tri-County" minus Palm Beach). Tiers 1–3
-below were added on top of these, bringing the total to 44 FL cities.
+below were added on top of these, bringing the total to 50 FL cities.
 
 ### Tier 1 — highest-volume untapped metros ✅ *added in this change*
 
@@ -53,8 +53,9 @@ Palm Bay, Melbourne, Port St. Lucie, Pensacola, Ocala, Daytona Beach.
 ### Tier 3 — saturation ✅ *added in this change*
 Boynton Beach, Delray Beach, Deltona, Kissimmee, Bradenton, Sunrise,
 Plantation, Davie, Largo, Sanford, Apopka, Palm Coast, Fort Pierce,
-North Port, Weston, Pinellas Park, Deerfield Beach. This covers essentially
-all FL cities above ~50k population. Further depth = high-intent neighborhood
+North Port, Weston, Pinellas Park, Deerfield Beach, Tamarac, Coconut Creek,
+Margate, Jupiter, Riviera Beach, Cutler Bay. This covers essentially all FL
+cities above ~50k population (50 FL cities total). Further depth = high-intent neighborhood
 landing pages within already-covered metros (e.g. promoting Hialeah, Doral,
 and Miami Gardens — currently Miami neighborhoods — to their own pages).
 
@@ -120,7 +121,7 @@ plus the existing `/services/{service}` cross-linked into every location.
 
 ## 4. Suggested sequencing / milestones
 
-1. **M1 (this change):** FL Tiers 1–3 live (38 added cities, 44 FL cities
+1. **M1 (this change):** FL Tiers 1–3 live (44 added cities, 50 FL cities
    total) under the existing flat route. Low risk, reversible.
 2. **M2:** Phase 0 refactor — `/[state]/[city]` routing, data-driven model,
    redirects, sitemap shards.
