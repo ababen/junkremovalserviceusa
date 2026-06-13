@@ -23,10 +23,13 @@ const heroStats = [
   { num: "$99", label: "Starts From" },
 ]
 
+const totalCities = cities.length
+const cityListForFaq = cities.map((c) => c.name).join(", ")
+
 const homepageFaqs = [
   {
     q: "What areas do you serve?",
-    a: "We currently serve Miami, Fort Lauderdale, Hollywood, Pembroke Pines, Miramar, and Pompano Beach — with more cities coming soon.",
+    a: `We currently serve ${totalCities} cities across Miami-Dade, Broward, and Palm Beach County — including ${cityListForFaq} — with more cities coming soon.`,
   },
   {
     q: "How is junk removal priced?",
@@ -49,10 +52,10 @@ const homepageFaqs = [
 export default function HomepageTemplate() {
   return (
     <>
-      {/* ── Trust bar (both layouts) ─────────────────────────── */}
+      {/* ── Trust bar (both layouts) ────────────────────────────────────────────────────── */}
       <TrustBar />
 
-      {/* ── Hero ─────────────────────────────────────────────── */}
+      {/* ── Hero ──────────────────────────────────────────────────────────── */}
 
       {/* DESKTOP: Split Screen — photo left | form right */}
       <section className="hidden lg:grid lg:grid-cols-2 min-h-[640px]">
@@ -127,7 +130,7 @@ export default function HomepageTemplate() {
 
           <p className="text-center text-xs text-gray-400 mt-4">
             Prefer to call?{" "}
-            <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="text-green-600 font-semibold hover:underline">
+            <a href={`tel:${PHONE.replace(/\\D/g, "")}`} className="text-green-600 font-semibold hover:underline">
               {PHONE}
             </a>
           </p>
@@ -198,7 +201,7 @@ export default function HomepageTemplate() {
               <BookingWizard />
 
               <a
-                href={`tel:${PHONE.replace(/\D/g, "")}`}
+                href={`tel:${PHONE.replace(/\\D/g, "")}`}
                 className="flex items-center justify-center gap-2 mt-4 text-sm font-semibold text-green-700 hover:text-green-800"
               >
                 📞 {PHONE}
@@ -286,7 +289,7 @@ export default function HomepageTemplate() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href={`tel:${PHONE.replace(/\D/g, "")}`}
+              href={`tel:${PHONE.replace(/\\D/g, "")}`}
               className="bg-white text-green-800 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors text-lg"
             >
               📞 {PHONE}

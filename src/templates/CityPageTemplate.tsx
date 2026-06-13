@@ -13,7 +13,7 @@ import FaqSection from "@/components/FaqSection"
 import ServiceCard from "@/components/ServiceCard"
 import TrustBar from "@/components/TrustBar"
 import { CityIllustration } from "@/components/illustrations/ServiceIllustrations"
-import { City } from "@/data/cities"
+import { City, cities } from "@/data/cities"
 import { services } from "@/data/services"
 
 const cityFaqs = (city: City) => [
@@ -70,7 +70,7 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href={`tel:${city.phone.replace(/\D/g, "")}`}
+                  href={`tel:${city.phone.replace(/\\D/g, "")}`}
                   className="flex items-center justify-center gap-2 bg-white text-green-800 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   📞 {city.phone}
@@ -152,7 +152,7 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href={`tel:${city.phone.replace(/\D/g, "")}`}
+              href={`tel:${city.phone.replace(/\\D/g, "")}`}
               className="bg-white text-green-800 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors text-lg"
             >
               📞 {city.phone}
@@ -172,15 +172,16 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm text-gray-500 mb-4 font-medium">Also serving:</p>
           <div className="flex flex-wrap justify-center gap-2">
-            {["Miami", "Fort Lauderdale", "Hollywood", "Pembroke Pines", "Miramar", "Pompano Beach"]
-              .filter((c) => c !== city.name)
+            {cities
+              .filter((c) => c.slug !== city.slug)
+              .slice(0, 12)
               .map((c) => (
                 <Link
-                  key={c}
-                  href={`/${c.toLowerCase().replace(/ /g, "-")}`}
+                  key={c.slug}
+                  href={`/${c.slug}`}
                   className="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm text-gray-600 hover:border-green-300 hover:text-green-700 transition-colors"
                 >
-                  {c}, FL
+                  {c.name}, {c.stateCode}
                 </Link>
               ))}
           </div>
