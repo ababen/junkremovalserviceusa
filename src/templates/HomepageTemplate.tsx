@@ -23,10 +23,13 @@ const heroStats = [
   { num: "$99", label: "Starts From" },
 ]
 
+const totalCities = cities.length
+const cityListForFaq = cities.map((c) => c.name).join(", ")
+
 const homepageFaqs = [
   {
     q: "What areas do you serve?",
-    a: "We currently serve Miami, Fort Lauderdale, Hollywood, Pembroke Pines, Miramar, and Pompano Beach — with more cities coming soon.",
+    a: `We currently serve ${totalCities} cities across Miami-Dade, Broward, and Palm Beach County — including ${cityListForFaq} — with more cities coming soon.`,
   },
   {
     q: "How is junk removal priced?",
