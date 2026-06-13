@@ -91,7 +91,7 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
                 ))}
               </ul>
               <p className="text-sm text-gray-400 mt-4">
-                Don't see your item? Call us — we take almost everything.
+                Don&apos;t see your item? Call us — we take almost everything.
               </p>
             </div>
 

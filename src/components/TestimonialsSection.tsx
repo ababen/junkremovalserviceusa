@@ -57,7 +57,7 @@ export default function TestimonialsSection() {
           {testimonials.map((t) => (
             <div key={t.name} className="bg-gray-50 rounded-xl p-6 border border-gray-100">
               <Stars count={t.stars} />
-              <p className="text-gray-700 text-sm mt-3 mb-4 leading-relaxed">"{t.text}"</p>
+              <p className="text-gray-700 text-sm mt-3 mb-4 leading-relaxed">&ldquo;{t.text}&rdquo;</p>
               <div>
                 <p className="font-semibold text-gray-900 text-sm">{t.name}</p>
                 <p className="text-gray-400 text-xs">{t.location}</p>

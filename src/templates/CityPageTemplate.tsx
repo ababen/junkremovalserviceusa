@@ -15,7 +15,6 @@ import TrustBar from "@/components/TrustBar"
 import { CityIllustration } from "@/components/illustrations/ServiceIllustrations"
 import { City } from "@/data/cities"
 import { services } from "@/data/services"
-import { PHONE } from "@/lib/constants"
 
 const cityFaqs = (city: City) => [
   {
